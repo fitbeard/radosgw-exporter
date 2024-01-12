@@ -51,7 +51,7 @@
           - name: Generate image tag
             id: image_tag
             run: |
-              echo tag=$(echo ${{ github.event.ref }} | sed 's/^v//') >> $GITHUB_OUTPUT
+              echo tag=$(echo ${{ github.ref_name }} | sed 's/^v//') >> $GITHUB_OUTPUT
 
           - name: Build image
             uses: docker/build-push-action@v5.1.0
