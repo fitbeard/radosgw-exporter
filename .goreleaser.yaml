@@ -1,0 +1,24 @@
+---
+builds:
+  - id: radosgw-exporter
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+    goarch:
+      - amd64
+      - arm64
+    binary: radosgw-exporter
+
+archives:
+  - id: radosgw-exporter
+    builds:
+      - radosgw-exporter
+    name_template: "radosgw_exporter_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+
+checksum:
+  name_template: checksums.txt
+  algorithm: sha256
+
+changelog:
+  sort: asc
