@@ -23,7 +23,7 @@
               go-version-file: go.mod
 
           - name: Release
-            uses: goreleaser/goreleaser-action@v4
+            uses: goreleaser/goreleaser-action@v5
             with:
               args: release --clean
             env:
