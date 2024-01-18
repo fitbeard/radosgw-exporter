@@ -196,7 +196,7 @@ func main() {
 
 	port := ":"+os.Getenv("EXPORTER_PORT")
 	if port == ":" {
-		port = ":12345"
+		port = ":9242"
 	}
 
 	if os.Getenv("RADOSGW_ENDPOINT") == "" {
