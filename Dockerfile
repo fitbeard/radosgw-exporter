@@ -6,9 +6,13 @@ COPY . .
 
 ENV CGO_ENABLED=0
 
-RUN go build -o radosgw-exporter
+RUN apk add upx
 
-FROM alpine:3.19
+RUN go build -ldflags "-s -w" -o radosgw-exporter
+
+RUN upx radosgw-exporter
+
+FROM gcr.io/distroless/static-debian12:latest
 
 COPY --from=compile /go/src/radosgw-exporter /
 
