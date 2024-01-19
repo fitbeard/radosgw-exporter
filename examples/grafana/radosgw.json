@@ -1,0 +1,1163 @@
+{
+"editable": true,
+"fiscalYearStartMonth": 0,
+"graphTooltip": 0,
+"id": 825,
+"iteration": 1653577554126,
+"links": [],
+"liveNow": false,
+"panels": [
+  {
+    "datasource": {
+      "type": "prometheus",
+      "uid": "Rhj16G0td"
+    },
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 10,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "lineInterpolation": "linear",
+          "lineWidth": 2,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "never",
+          "spanNulls": false,
+          "stacking": {
+            "group": "A",
+            "mode": "none"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "none"
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 7,
+      "w": 11,
+      "x": 0,
+      "y": 0
+    },
+    "id": 2,
+    "links": [],
+    "options": {
+      "legend": {
+        "calcs": [
+          "min",
+          "max",
+          "last"
+        ],
+        "displayMode": "table",
+        "placement": "right"
+      },
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "8.0.2",
+    "targets": [
+      {
+        "exemplar": true,
+        "expr": "sum(ceph_radosgw_bucket_num_objects{cluster=\"$cluster\"})",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "legendFormat": "Total objects",
+        "refId": "A",
+        "step": 300,
+        "target": ""
+      }
+    ],
+    "title": "Total S3 Objects in cluster",
+    "transparent": true,
+    "type": "timeseries"
+  },
+  {
+    "datasource": {
+      "type": "prometheus",
+      "uid": "Rhj16G0td"
+    },
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 10,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "lineInterpolation": "linear",
+          "lineWidth": 2,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "never",
+          "spanNulls": false,
+          "stacking": {
+            "group": "A",
+            "mode": "none"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "kbytes"
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 7,
+      "w": 13,
+      "x": 11,
+      "y": 0
+    },
+    "id": 5,
+    "links": [],
+    "options": {
+      "legend": {
+        "calcs": [
+          "min",
+          "max",
+          "last"
+        ],
+        "displayMode": "table",
+        "placement": "right"
+      },
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "8.0.2",
+    "targets": [
+      {
+        "exemplar": true,
+        "expr": "sum(ceph_radosgw_user_size_kb{cluster=\"$cluster\"})",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "legendFormat": "Total size",
+        "refId": "A",
+        "step": 300,
+        "target": ""
+      }
+    ],
+    "title": "Total S3 cluster used size",
+    "transparent": true,
+    "type": "timeseries"
+  },
+  {
+    "datasource": {
+      "type": "prometheus",
+      "uid": "Rhj16G0td"
+    },
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 10,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "lineInterpolation": "linear",
+          "lineWidth": 2,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "never",
+          "spanNulls": false,
+          "stacking": {
+            "group": "A",
+            "mode": "normal"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "mappings": [],
+        "min": 0,
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "none"
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 7,
+      "w": 24,
+      "x": 0,
+      "y": 7
+    },
+    "id": 1,
+    "links": [],
+    "options": {
+      "legend": {
+        "calcs": [
+          "min",
+          "max",
+          "last"
+        ],
+        "displayMode": "table",
+        "placement": "right"
+      },
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "8.0.2",
+    "targets": [
+      {
+        "exemplar": true,
+        "expr": "ceph_radosgw_bucket_num_objects{cluster=\"$cluster\",bucket=~\"$bucket\"}",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "legendFormat": "{{ bucket }}",
+        "refId": "A",
+        "step": 300,
+        "target": ""
+      }
+    ],
+    "title": "Objects Num per Bucket",
+    "transparent": true,
+    "type": "timeseries"
+  },
+  {
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 0,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "lineInterpolation": "linear",
+          "lineWidth": 1,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "auto",
+          "spanNulls": false,
+          "stacking": {
+            "group": "A",
+            "mode": "none"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        }
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 8,
+      "w": 24,
+      "x": 0,
+      "y": 14
+    },
+    "id": 10,
+    "options": {
+      "legend": {
+        "calcs": [
+          "last"
+        ],
+        "displayMode": "table",
+        "placement": "right"
+      },
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "8.0.2",
+    "targets": [
+      {
+        "exemplar": true,
+        "expr": "ceph_radosgw_quota_bucket_max_objects{cluster=\"$cluster\",owner=~\"$owner\"}",
+        "interval": "",
+        "legendFormat": "{{ owner }}",
+        "refId": "A"
+      }
+    ],
+    "title": "Quota User Max Objects per Bucket",
+    "transparent": true,
+    "type": "timeseries"
+  },
+  {
+    "datasource": {
+      "type": "prometheus",
+      "uid": "Rhj16G0td"
+    },
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 10,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "lineInterpolation": "linear",
+          "lineWidth": 2,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "never",
+          "spanNulls": false,
+          "stacking": {
+            "group": "A",
+            "mode": "normal"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "mappings": [],
+        "min": 0,
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "kbytes"
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 7,
+      "w": 24,
+      "x": 0,
+      "y": 22
+    },
+    "id": 3,
+    "links": [],
+    "options": {
+      "legend": {
+        "calcs": [
+          "min",
+          "max",
+          "last"
+        ],
+        "displayMode": "table",
+        "placement": "right"
+      },
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "8.0.2",
+    "targets": [
+      {
+        "exemplar": true,
+        "expr": "ceph_radosgw_bucket_size_kb{cluster=\"$cluster\",bucket=~\"$bucket\"}",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "legendFormat": "{{ bucket }}",
+        "refId": "A",
+        "step": 300,
+        "target": ""
+      }
+    ],
+    "title": "Bucket Size",
+    "transparent": true,
+    "type": "timeseries"
+  },
+  {
+    "description": "-1 = unlimited",
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 10,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "lineInterpolation": "linear",
+          "lineWidth": 1,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "never",
+          "spanNulls": true,
+          "stacking": {
+            "group": "A",
+            "mode": "none"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "kbytes"
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 8,
+      "w": 24,
+      "x": 0,
+      "y": 29
+    },
+    "id": 11,
+    "options": {
+      "legend": {
+        "calcs": [
+          "last"
+        ],
+        "displayMode": "table",
+        "placement": "right"
+      },
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "8.0.2",
+    "targets": [
+      {
+        "exemplar": true,
+        "expr": "ceph_radosgw_quota_bucket_max_size_kb{cluster=\"$cluster\",owner=~\"$owner\"}",
+        "interval": "",
+        "legendFormat": "{{ owner }}",
+        "refId": "A"
+      }
+    ],
+    "title": "Quota Bucket Max Size",
+    "transparent": true,
+    "type": "timeseries"
+  },
+  {
+    "datasource": {
+      "type": "prometheus",
+      "uid": "Rhj16G0td"
+    },
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 10,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "lineInterpolation": "linear",
+          "lineWidth": 2,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "never",
+          "spanNulls": false,
+          "stacking": {
+            "group": "A",
+            "mode": "normal"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "mappings": [],
+        "min": 0,
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "kbytes"
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 7,
+      "w": 24,
+      "x": 0,
+      "y": 37
+    },
+    "id": 4,
+    "links": [],
+    "options": {
+      "legend": {
+        "calcs": [
+          "min",
+          "max",
+          "last"
+        ],
+        "displayMode": "table",
+        "placement": "right"
+      },
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "8.0.2",
+    "targets": [
+      {
+        "exemplar": true,
+        "expr": "ceph_radosgw_user_size_kb{cluster=\"$cluster\",owner=~\"$owner\"}",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "legendFormat": "{{ owner }}",
+        "refId": "A",
+        "step": 300,
+        "target": ""
+      }
+    ],
+    "title": "User Size",
+    "transparent": true,
+    "type": "timeseries"
+  },
+  {
+    "description": "-1 = unlimited",
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 10,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "lineInterpolation": "linear",
+          "lineWidth": 1,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "never",
+          "spanNulls": true,
+          "stacking": {
+            "group": "A",
+            "mode": "none"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "kbytes"
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 8,
+      "w": 24,
+      "x": 0,
+      "y": 44
+    },
+    "id": 12,
+    "options": {
+      "legend": {
+        "calcs": [
+          "last"
+        ],
+        "displayMode": "table",
+        "placement": "right"
+      },
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "8.0.2",
+    "targets": [
+      {
+        "exemplar": true,
+        "expr": "ceph_radosgw_quota_user_max_size_kb{cluster=\"$cluster\",owner=~\"$owner\"}",
+        "interval": "",
+        "legendFormat": "{{ owner }}",
+        "refId": "A"
+      }
+    ],
+    "title": "Quota User Max Size",
+    "transparent": true,
+    "type": "timeseries"
+  },
+  {
+    "datasource": {
+      "type": "prometheus",
+      "uid": "Rhj16G0td"
+    },
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 10,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "lineInterpolation": "linear",
+          "lineWidth": 2,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "never",
+          "spanNulls": false,
+          "stacking": {
+            "group": "A",
+            "mode": "normal"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "mappings": [],
+        "min": 0,
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "none"
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 7,
+      "w": 24,
+      "x": 0,
+      "y": 52
+    },
+    "id": 14,
+    "links": [],
+    "options": {
+      "legend": {
+        "calcs": [
+          "min",
+          "max",
+          "last"
+        ],
+        "displayMode": "table",
+        "placement": "right"
+      },
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "8.0.2",
+    "targets": [
+      {
+        "exemplar": true,
+        "expr": "ceph_radosgw_user_num_objects{cluster=\"$cluster\",owner=~\"$owner\"}",
+        "format": "time_series",
+        "interval": "",
+        "intervalFactor": 1,
+        "legendFormat": "{{ owner }}",
+        "refId": "A",
+        "step": 300,
+        "target": ""
+      }
+    ],
+    "title": "User Num Objects",
+    "transparent": true,
+    "type": "timeseries"
+  },
+  {
+    "description": "-1 = unlimited",
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 10,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "lineInterpolation": "linear",
+          "lineWidth": 1,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "never",
+          "spanNulls": true,
+          "stacking": {
+            "group": "A",
+            "mode": "none"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "none"
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 8,
+      "w": 24,
+      "x": 0,
+      "y": 59
+    },
+    "id": 13,
+    "options": {
+      "legend": {
+        "calcs": [
+          "last"
+        ],
+        "displayMode": "table",
+        "placement": "right"
+      },
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "8.0.2",
+    "targets": [
+      {
+        "exemplar": true,
+        "expr": "ceph_radosgw_quota_user_max_objects{cluster=\"$cluster\",owner=~\"$owner\"}",
+        "interval": "",
+        "legendFormat": "{{ owner }}",
+        "refId": "A"
+      }
+    ],
+    "title": "Quota User Max Obejcts ",
+    "transparent": true,
+    "type": "timeseries"
+  },
+  {
+    "fieldConfig": {
+      "defaults": {
+        "color": {
+          "mode": "palette-classic"
+        },
+        "custom": {
+          "axisLabel": "",
+          "axisPlacement": "auto",
+          "barAlignment": 0,
+          "drawStyle": "line",
+          "fillOpacity": 10,
+          "gradientMode": "none",
+          "hideFrom": {
+            "legend": false,
+            "tooltip": false,
+            "viz": false
+          },
+          "lineInterpolation": "linear",
+          "lineWidth": 1,
+          "pointSize": 5,
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "showPoints": "never",
+          "spanNulls": true,
+          "stacking": {
+            "group": "A",
+            "mode": "none"
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          }
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        },
+        "unit": "short"
+      },
+      "overrides": []
+    },
+    "gridPos": {
+      "h": 8,
+      "w": 24,
+      "x": 0,
+      "y": 67
+    },
+    "id": 7,
+    "options": {
+      "legend": {
+        "calcs": [
+          "last"
+        ],
+        "displayMode": "table",
+        "placement": "right"
+      },
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      }
+    },
+    "pluginVersion": "8.0.2",
+    "targets": [
+      {
+        "exemplar": true,
+        "expr": "ceph_radosgw_bucket_num_shards{cluster=\"$cluster\",bucket=~\"$bucket\"}",
+        "interval": "",
+        "legendFormat": "{{ bucket }}",
+        "refId": "A"
+      }
+    ],
+    "title": "Bucket Shards Num",
+    "transparent": true,
+    "type": "timeseries"
+  }
+],
+"refresh": "",
+"schemaVersion": 35,
+"style": "dark",
+"tags": [
+  "rgw"
+],
+"templating": {
+  "list": [
+    {
+      "current": {
+        "selected": false,
+        "text": "deepswamp",
+        "value": "deepswamp"
+      },
+      "definition": "label_values(cluster)",
+      "hide": 0,
+      "includeAll": false,
+      "label": "cluster",
+      "multi": false,
+      "name": "cluster",
+      "options": [],
+      "query": {
+        "query": "label_values(cluster)",
+        "refId": "StandardVariableQuery"
+      },
+      "refresh": 1,
+      "regex": "/.*-ceph*/",
+      "skipUrlSync": false,
+      "sort": 0,
+      "tagValuesQuery": "",
+      "tagsQuery": "",
+      "type": "query",
+      "useTags": false
+    },
+    {
+      "current": {
+        "selected": true,
+        "text": [
+          "All"
+        ],
+        "value": [
+          "$__all"
+        ]
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "Rhj16G0td"
+      },
+      "definition": "label_values(ceph_radosgw_quota_user_enabled{cluster=\"$cluster\"}, owner)",
+      "hide": 0,
+      "includeAll": true,
+      "label": "Owner",
+      "multi": true,
+      "name": "owner",
+      "options": [],
+      "query": {
+        "query": "label_values(ceph_radosgw_quota_user_enabled{cluster=\"$cluster\"}, owner)",
+        "refId": "StandardVariableQuery"
+      },
+      "refresh": 1,
+      "regex": "",
+      "skipUrlSync": false,
+      "sort": 1,
+      "type": "query",
+      "useTags": false
+    },
+    {
+      "current": {
+        "selected": true,
+        "text": [
+          "All"
+        ],
+        "value": [
+          "$__all"
+        ]
+      },
+      "datasource": {
+        "type": "prometheus",
+        "uid": "Rhj16G0td"
+      },
+      "definition": "label_values(ceph_radosgw_bucket_size_kb{cluster=\"$cluster\", owner=~\"$owner\"}, bucket)",
+      "hide": 0,
+      "includeAll": true,
+      "label": "Bucket",
+      "multi": true,
+      "name": "bucket",
+      "options": [],
+      "query": {
+        "query": "label_values(ceph_radosgw_bucket_size_kb{cluster=\"$cluster\", owner=~\"$owner\"}, bucket)",
+        "refId": "StandardVariableQuery"
+      },
+      "refresh": 1,
+      "regex": "",
+      "skipUrlSync": false,
+      "sort": 1,
+      "type": "query",
+      "useTags": false
+    }
+  ]
+},
+"time": {
+  "from": "now-1h",
+  "to": "now"
+},
+"timepicker": {
+  "refresh_intervals": [
+    "5s",
+    "10s",
+    "30s",
+    "1m",
+    "5m",
+    "15m",
+    "30m",
+    "1h",
+    "2h",
+    "1d"
+  ],
+  "time_options": [
+    "5m",
+    "15m",
+    "1h",
+    "6h",
+    "12h",
+    "24h",
+    "2d",
+    "7d",
+    "30d"
+  ]
+},
+"timezone": "browser",
+"title": "Ceph RadosGW",
+"uid": "000000233999",
+"version": 12948,
+"weekStart": ""
+}

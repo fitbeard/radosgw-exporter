@@ -306,9 +306,9 @@ func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		_, err := w.Write([]byte(`<html>
-             <head><title>Ceph RadosGW Usage Exporter</title></head>
+             <head><title>Ceph RadosGW Exporter</title></head>
              <body>
-             <h1>Ceph RadosGW Usage Exporter</h1>
+             <h1>Ceph RadosGW Exporter</h1>
              <p><a href='/metrics'>Metrics</a></p>
              </body>
              </html>`))

@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: prometheus-radosgw-exporter
+  labels:
+    app.kubernetes.io/name: prometheus-radosgw-exporter
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: prometheus-radosgw-exporter
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: prometheus-radosgw-exporter
+    spec:
+      containers:
+      - image: quay.io/tadas/radosgw-exporter:latest
+        env:
+        - name: ACCESS_KEY
+          valueFrom:
+            secretKeyRef:
+              key: AccessKey
+              name: rook-ceph-object-user-store-name-radosgw-exporter # use store name
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              key: SecretKey
+              name: rook-ceph-object-user-store-name-radosgw-exporter # use store name
+        - name: RADOSGW_ENDPOINT
+          valueFrom:
+            secretKeyRef:
+              key: Endpoint
+              name: rook-ceph-object-user-store-name-radosgw-exporter # use store name
+        - name: EXPORTER_PORT
+          value: "9242"
+        - name: SKIP_SSL_VERIFICATION
+          value: "true"
+        name: exporter
+        ports:
+        - containerPort: 9242
+          name: http
+          protocol: TCP
+        resources:
+          limits:
+            cpu: 500m
+            memory: 512Mi
+          requests:
+            cpu: 10m
+            memory: 40Mi
+        livenessProbe:
+          tcpSocket:
+            port: http
+        readinessProbe:
+          tcpSocket:
+            port: http
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+            - ALL
+          readOnlyRootFilesystem: true
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
