@@ -115,13 +115,20 @@ ceph_radosgw_user_size_kb{owner="rook-ceph-internal-s3-user-checker-1219a9fe-165
 
 | Environment variable | Description | Default |
 | --- | --- | ---|
-| `RADOSGW_ENDPOINT` | URL for the RadosGW admin API (example: https://rgw.deepswamp:8088) | `NA` |
+| `RADOSGW_ENDPOINT` | URL for the RadosGW admin API (example: [https://rgw.deepswamp:8088]) | `NA` |
 | `ACCESS_KEY` | RadosGW user access key | `NA` |
 | `SECRET_KEY` | RadosGW user secret key | `NA` |
 | `EXPORTER_PORT` | Exporter listen port | `9242` |
 | `SKIP_SSL_VERIFICATION` | Skip RadosGW endpoint SSL verification | `false` |
 
 ### Docker
+
+Container images are available for `amd64` and `arm64` platforms:
+
+```shell
+quay.io/tadas/radosgw-exporter:latest
+quay.io/tadas/radosgw-exporter:<TAG>
+```
 
 ```shell
 docker run -d -p 9242:9242 \
