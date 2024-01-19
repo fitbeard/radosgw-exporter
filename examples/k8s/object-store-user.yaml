@@ -1,0 +1,12 @@
+apiVersion: ceph.rook.io/v1
+kind: CephObjectStoreUser
+metadata:
+  name: radosgw-exporter
+spec:
+  store: store-name # set store name
+  displayName: radosgw-exporter
+  capabilities:
+    bucket: read
+    metadata: read
+    usage: read
+    user: read
